@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackgroundColor"
+    tools:context=".LineActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/showText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Get the line number:"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputExponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:inputType="number"
+        android:text="6"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showText" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="162dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:background="#03DAC5"
+        android:fontFamily="sans-serif-light"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputExponente" />
+
+    <ImageButton
+        android:id="@+id/copyButton"
+        android:layout_width="162dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/copy_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputExponente" />
+
+    <ScrollView
+        android:layout_width="342dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mainText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="sans-serif-light"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
